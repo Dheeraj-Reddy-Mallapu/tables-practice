@@ -134,34 +134,3 @@ class Tables extends StatelessWidget {
     );
   }
 }
-
-/*String op = '*';
-
-int max = 22;
-//int for+- = 980;
-
-int num;
-
-var questions = [q1, q2, q3, q4, q5];
-
-var q1 = '$num1 $op1 $num2';
-var q2 = '$num3 $op2 $num4';
-var q3 = '$num5 $op3 $num6';
-var q4 = '$num7 $op4 $num8';
-var q5 = '$num9 $op5 $num10';
-var q6 = '$num11 $op2 $num12';
-var q7 = '$num13 $op1 $num14';
-var q8 = '$num15 $op4 $num16';
-var q9 = '$num17 $op3 $num18';
-var q10 = '$num19 $op5 $num20';
-
-var a1 = eval(q1);
-var a2 = eval(q2);
-var a3 = eval(q3);
-var a4 = eval(q4);
-var a5 = eval(q5);
-var a6 = eval(q6);
-var a7 = eval(q7);
-var a8 = eval(q8);
-var a9 = eval(q9);
-var a10 = eval(q10);*/
