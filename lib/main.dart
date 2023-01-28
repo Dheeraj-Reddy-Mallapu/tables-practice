@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'welcome_screen.dart';
 
 void main() {
@@ -12,14 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tables',
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),
-      home: const WelcomeScreen(
-        title: 'Tables',
-      ),
+      home: const WelcomeScreen(),
     );
   }
 }

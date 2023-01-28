@@ -28,9 +28,7 @@ class _Table19State extends State<Table19> {
         actions: <Widget>[
           IconButton(
               onPressed: () {
-                Navigator.pop(context, MaterialPageRoute(builder: (context) {
-                  return const WelcomeScreen(title: "Tables Practice");
-                }));
+                Navigator.pushNamed(context, '/');
               },
               icon: const Icon(Icons.home))
         ],
@@ -61,9 +59,7 @@ class _Table19State extends State<Table19> {
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
             Navigator.push(context, MaterialPageRoute(
               builder: (context) {
-                return const WelcomeScreen(
-                  title: 'Tables',
-                );
+                return const WelcomeScreen();
               },
             ));
           } else {

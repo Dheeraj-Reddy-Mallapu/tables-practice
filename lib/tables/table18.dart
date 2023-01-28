@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tables_test/tables_test.dart';
-import '../welcome_screen.dart';
 import 'table19.dart';
 
 class Table18 extends StatefulWidget {
@@ -29,9 +28,7 @@ class _Table18State extends State<Table18> {
         actions: <Widget>[
           IconButton(
               onPressed: () {
-                Navigator.pop(context, MaterialPageRoute(builder: (context) {
-                  return const WelcomeScreen(title: "Tables Practice");
-                }));
+                Navigator.pushNamed(context, '/');
               },
               icon: const Icon(Icons.home))
         ],

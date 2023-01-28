@@ -16,9 +16,9 @@ import 'tables/table19.dart';
 import 'greetings.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key, required this.title});
-
-  final String title;
+  const WelcomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

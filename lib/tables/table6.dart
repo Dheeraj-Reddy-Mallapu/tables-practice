@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tables_test/welcome_screen.dart';
 import 'table7.dart';
 import 'package:tables_test/tables_test.dart';
 
@@ -29,9 +28,7 @@ class _Table6State extends State<Table6> {
         actions: <Widget>[
           IconButton(
               onPressed: () {
-                Navigator.pop(context, MaterialPageRoute(builder: (context) {
-                  return const WelcomeScreen(title: "Tables Practice");
-                }));
+                Navigator.pushNamed(context, '/');
               },
               icon: const Icon(Icons.home))
         ],
@@ -55,11 +52,19 @@ class _Table6State extends State<Table6> {
               ans6 == 42 &&
               ans7 == 48 &&
               ans8 == 54) {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) {
-                return const Table7();
-              },
-            ));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const Table7();
+                },
+              ),
+            );
+            const snackBar = SnackBar(
+              content: Text('Hurray! All answers are correct'),
+              backgroundColor: Colors.green,
+            );
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
           } else {
             const snackBar = SnackBar(
               content: Text('Oops! Wrong Answer'),
