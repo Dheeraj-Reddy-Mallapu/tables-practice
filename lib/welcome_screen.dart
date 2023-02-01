@@ -165,3 +165,19 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
+
+class Answers extends StatelessWidget {
+  final int ans;
+
+  const Answers({super.key, required this.ans});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(4.5),
+      child: Card(
+        child: Text('$ans', style: const TextStyle(fontSize: 38)),
+      ),
+    );
+  }
+}
