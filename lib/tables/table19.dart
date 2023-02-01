@@ -1,3 +1,4 @@
+import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:tables_test/tables_test.dart';
 import 'package:tables_test/welcome_screen.dart';
@@ -23,14 +24,36 @@ class _Table19State extends State<Table19> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const WelcomeScreen()));
+            },
+            icon: const Icon(Icons.home)),
         title: const Text('TABLE - 19'),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/');
+          CircularCountDownTimer(
+              width: MediaQuery.of(context).size.width / 12,
+              height: MediaQuery.of(context).size.width / 12,
+              duration: 60,
+              onComplete: () {
+                const snackBar = SnackBar(
+                  content: Text(
+                    'Times Up! But you can continue.',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  backgroundColor: Color.fromARGB(255, 135, 201, 255),
+                  duration: Duration(seconds: 1),
+                  behavior: SnackBarBehavior.floating,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
               },
-              icon: const Icon(Icons.home))
+              isReverse: true,
+              fillColor: Colors.green,
+              ringColor: Colors.transparent),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -52,20 +75,21 @@ class _Table19State extends State<Table19> {
               ans6 == 133 &&
               ans7 == 152 &&
               ans8 == 171) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const WelcomeScreen()));
             const snackBar = SnackBar(
-              content: Text('Hurray!'),
-              backgroundColor: Colors.blue,
+              content: Text('Hurray! All answers are correct'),
+              backgroundColor: Colors.green,
+              duration: Duration(milliseconds: 750),
+              behavior: SnackBarBehavior.floating,
             );
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) {
-                return const WelcomeScreen();
-              },
-            ));
           } else {
             const snackBar = SnackBar(
               content: Text('Oops! Wrong Answer'),
               backgroundColor: Colors.orange,
+              duration: Duration(milliseconds: 750),
+              behavior: SnackBarBehavior.floating,
             );
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
           }

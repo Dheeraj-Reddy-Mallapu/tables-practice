@@ -36,47 +36,33 @@ class WelcomeScreen extends StatelessWidget {
               width: 500,
               height: 350,
               child: SvgPicture.asset('assets/images/calculator.svg')),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return const Table6();
-                },
-              ));
-            },
-            child: const Text(
-              "Let's practice!",
-            ),
-          ),
-          const SizedBox(width: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table6();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table6()));
                   },
                   child: const Text('6')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table7();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table7()));
                   },
                   child: const Text('7')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table8();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table8()));
                   },
                   child: const Text('8')),
             ],
@@ -86,29 +72,28 @@ class WelcomeScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table9();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table9()));
                   },
                   child: const Text('9')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table12();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table12()));
                   },
                   child: const Text('12')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table13();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table13()));
                   },
                   child: const Text('13')),
             ],
@@ -118,29 +103,28 @@ class WelcomeScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table14();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table14()));
                   },
                   child: const Text('14')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table15();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table15()));
                   },
                   child: const Text('15')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table16();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table16()));
                   },
                   child: const Text('16')),
             ],
@@ -150,29 +134,28 @@ class WelcomeScreen extends StatelessWidget {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table17();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table17()));
                   },
                   child: const Text('17')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table18();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table18()));
                   },
                   child: const Text('18')),
+              const SizedBox(width: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return const Table19();
-                      },
-                    ));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Table19()));
                   },
                   child: const Text('19')),
             ],

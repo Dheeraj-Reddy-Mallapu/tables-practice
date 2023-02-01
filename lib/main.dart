@@ -1,4 +1,6 @@
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
+
 import 'welcome_screen.dart';
 
 void main() {
@@ -10,12 +12,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-      ),
-      home: const WelcomeScreen(),
-    );
+    return DynamicColorBuilder(
+        builder: ((ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
+      return MaterialApp(
+        title: 'Math Quiz',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: lightDynamic ?? _defaultLightColorScheme,
+        ),
+        darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: darkDynamic ?? _defaultDarkColorScheme,
+        ),
+        home: const WelcomeScreen(),
+      );
+    }));
   }
 }
+
+final _defaultLightColorScheme = ColorScheme.fromSeed(seedColor: Colors.blue);
+
+final _defaultDarkColorScheme =
+    ColorScheme.fromSeed(seedColor: Colors.blue, brightness: Brightness.dark);
