@@ -1,8 +1,8 @@
-import 'package:circular_countdown_timer/circular_countdown_timer.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:tables_test/tables_test.dart';
+import 'package:tables_test/widgets/my_text_field.dart';
 import 'package:tables_test/welcome_screen.dart';
+import '../widgets/countdown_timer.dart';
 import 'table8.dart';
 
 class Table7 extends StatefulWidget {
@@ -36,27 +36,7 @@ class _Table7State extends State<Table7> {
               icon: const Icon(Icons.home)),
           title: const Text('TABLE - 7'),
           centerTitle: true,
-          actions: <Widget>[
-            CircularCountDownTimer(
-                width: MediaQuery.of(context).size.width / 12,
-                height: MediaQuery.of(context).size.width / 12,
-                duration: 30,
-                onComplete: () {
-                  const snackBar = SnackBar(
-                    content: Text(
-                      'Times Up! But you can continue.',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    backgroundColor: Color.fromARGB(255, 135, 201, 255),
-                    duration: Duration(seconds: 1),
-                    behavior: SnackBarBehavior.floating,
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                },
-                isReverse: true,
-                fillColor: Colors.green,
-                ringColor: Colors.transparent),
-          ],
+          actions: const <Widget>[CountdownTimer(time: 30)],
         ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.navigate_next),
@@ -129,7 +109,7 @@ class _Table7State extends State<Table7> {
                         ),
                     ],
                   ),
-                  Tables(
+                  MyTextField(
                       txtCtrl1: inpAns1,
                       txtCtrl2: inpAns2,
                       txtCtrl3: inpAns3,

@@ -13,7 +13,7 @@ import 'tables/table16.dart';
 import 'tables/table17.dart';
 import 'tables/table18.dart';
 import 'tables/table19.dart';
-import 'greetings.dart';
+import 'widgets/greetings.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({
@@ -22,7 +22,6 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //    var theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Tables Practice'),

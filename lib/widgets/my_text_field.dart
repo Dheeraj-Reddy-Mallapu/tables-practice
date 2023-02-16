@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class Tables extends StatelessWidget {
+class MyTextField extends StatelessWidget {
   var txtCtrl1;
   var txtCtrl2;
   var txtCtrl3;
@@ -12,7 +12,7 @@ class Tables extends StatelessWidget {
   var txtCtrl7;
   var txtCtrl8;
 
-  Tables({
+  MyTextField({
     super.key,
     required this.txtCtrl1,
     required this.txtCtrl2,
@@ -33,7 +33,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl1,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -46,7 +46,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl2,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -59,7 +59,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl3,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -72,7 +72,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl4,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -85,7 +85,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl5,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -98,7 +98,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl6,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -111,7 +111,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl7,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
@@ -124,7 +124,7 @@ class Tables extends StatelessWidget {
           child: SizedBox(
             height: 55,
             width: 150,
-            child: TextFormField(
+            child: TextField(
               controller: txtCtrl8,
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
